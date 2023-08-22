@@ -1,41 +1,128 @@
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-
-.msg {
+.msg,
+.msg-left,
+.msg-right,
+.msg-bottom {
   top: 100px;
-  display: inline-block;
+  /* display: inline-block; */
+  display: none;
   position: relative;
-  padding:  10px 20px;
+  padding: 10px 20px;
   color: #fff;
   box-sizing: border-box;
+  background-color: teal;
   max-width: 300px;
-  min-width: 80px;
+  min-width: 120px;
   min-height: 38px;
+  border: 0;
+  text-align: center;
 }
-.msg:before {
+
+.msg:before,
+.msg-left:before,
+.msg-right:before,
+.msg-bottom:before {
   content: "";
   position: absolute;
-  display: block;
+  /* display: block; */
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  border: 1px solid #e5a002;
   border-radius: 2px;
   box-sizing: border-box;
 }
+
+.msg-left:before {
+  content: "";
+  position: absolute;
+  /* display: block; */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+
+  border-right: 10px solid blue;
+}
+
 .msg:after {
   content: "";
   position: absolute;
-  display: block;
+  /* display: block; */
   width: 25px;
   height: 20px;
-  background: #e5a002;
   top: calc(100% - 1px);
-  left: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   box-sizing: border-box;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid teal;
 }
+
+
+.top {
+  margin-top: 200px;
+  padding-left: 50px;
+}
+
+.top:hover~.msg {
+  top: 140px;
+  position: absolute;
+  display: block !important;
+}
+
+.left {
+  margin: 30px 0 0 300px;
+}
+
+.left:hover~.msg-left {
+  top: 200px;
+  position: absolute;
+  display: block !important;
+  /* color: blue; */
+}
+
+.bottom {
+  margin: 100px 0 100px 100px;
+}
+
+
+.bottom:hover~.msg-left {
+  top: 200px;
+  position: absolute;
+  display: block !important;
+  /* color: blue; */
+}
+
+.right:hover~.msg {
+  top: 200px;
+  position: absolute;
+  display: block !important;
+  /* color: blue; */
+}
+
+.msg-left:after {
+  content: "";
+  position: absolute;
+  /* display: block; */
+  width: 25px;
+  height: 20px;
+  top: calc(100% - 1px);
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+
+  /* background-color: teal; */
+}
+

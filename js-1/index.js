@@ -34,7 +34,7 @@ const sugar = [
   }
 ]
 
-const price = [
+const ice = [
   {
     "id": 1,
     "amount": 0,
@@ -70,26 +70,23 @@ const addToCart2 = {
   sugarAmount: 50,
 }
 
+var arr = [];
 const addToCartAction = (item) => {
-  const arr = [];
-  a = JSON.parse(localStorage.getItem('session')) || [];
-  const index = arr.findIndex(item.id)
-  if(arr[index].includes(item.id)){
-    arr[index].quantity++;  
-  } else {
-    arr.push({
-      id: item.id,
-      name: item.name,
-      price: item.price,
-      quantity: item.quantity,
-      iceAmount: item.iceAmount,
-      sugarAmount: item.sugarAmount,
-    });
-  }
+  // const index = arr.findIndex(item.id);
+  // if (arr[index].includes(item.id)) {
+  //   arr[index].quantity++;
+  // } else {
+  arr.push({
+    id: item.id,
+    name: item.name,
+    price: item.price,
+    quantity: item.quantity,
+    iceAmount: item.iceAmount,
+    sugarAmount: item.sugarAmount,
+  });
   return arr;
+  // }
 };
 
 addToCartAction(addToCart);
-addToCartAction(addToCart1);
-addToCartAction(addToCart2);
-
+console.log(addToCartAction(addToCart2));
