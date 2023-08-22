@@ -10,12 +10,25 @@ const arr2 = [
 ];
 
 const arr = arr1.concat(arr2);
-const arrTam = () => {
-  arr.filter((item) => {
-    return item.id !== 1
-  });
-  return arr;
-}
 
-console.log(arrTam());
+const hasSameId = (item) => {
+  return arr.filter((existingItem) => existingItem.id !== item.id);
+};
 
+const result = hasSameId({ id: '2', quantity: 2 });
+
+const s = result.reduce((sum, curr) => {
+ 	const n = sum.some((item) => {
+  	if(item.id === curr.id) {
+      item.quantity += curr.quantity
+      return true
+    }
+  })
+  if(!n) {
+    return [...sum,curr];
+  } else {
+    return [...sum];
+  }
+}, [])
+
+console.log(s);
