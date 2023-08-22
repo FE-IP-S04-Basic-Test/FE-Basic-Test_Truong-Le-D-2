@@ -9,26 +9,31 @@ const arr2 = [
   { id: '3', quantity: 2 }
 ];
 
-const arr = arr1.concat(arr2);
-
-const hasSameId = (item) => {
-  return arr.filter((existingItem) => existingItem.id !== item.id);
+const formatArray = (arr) => {
+  return arr.reduce((acc, curr) => {
+    if (acc[curr.id]) {
+      acc[curr.id].quantity += curr.quantity;
+    } else {
+      acc[curr.id] = { quantity: curr.quantity };
+    }
+    return acc;
+  }, {});
 };
 
-const result = hasSameId({ id: '2', quantity: 2 });
-
-const s = result.reduce((sum, curr) => {
- 	const n = sum.some((item) => {
-  	if(item.id === curr.id) {
-      item.quantity += curr.quantity
-      return true
+const mergeArray = (arr1, arr2) => {
+  const formatArr1 = formatArray(arr1);
+  const formatArr2 = formatArray(arr2);
+  const newArray = [];
+  for (const key in formatArr1) {
+    if (formatArr2[key]) {
+      const item = {
+        id: key,
+        quantity: formatArr2[key].quantity + formatArr1[key].quantity,
+      };
+      newArray.push(item);
     }
-  })
-  if(!n) {
-    return [...sum,curr];
-  } else {
-    return [...sum];
   }
-}, [])
+  return newArray;
+};
 
-console.log(s);
+console.log(mergeArray(arr1, arr2));
