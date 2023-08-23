@@ -1,16 +1,16 @@
-const input = document.querySelector('.input');
-const btnAdd = document.querySelector('.btn-add');
-const renderList = document.querySelector('.render-list');
+var input = document.querySelector('.input');
+var btnAdd = document.querySelector('.btn-add');
+var renderList = document.querySelector('.render-list');
 
 
-let items = getItemsLocalStorage();
+var items = getItemsLocalStorage();
 render(items);
 
 btnAdd.addEventListener('click', addItemToLocalStorage);
 function addItemToLocalStorage(e) {
   e.preventDefault();
-  const items = JSON.parse(localStorage.getItem('items')) || [];
-  const item = input.value;
+  var items = JSON.parse(localStorage.getItem('items')) || [];
+  var item = input.value;
   if (!item) {
     alert('Please enter the value in input !');
   } else {
@@ -22,7 +22,7 @@ function addItemToLocalStorage(e) {
 }
 
 function render(items) {
-  let content = '<ul>';
+  var content = '<ul>';
   items.forEach((item, index) => {
     content += `
     <li class="item">
@@ -42,7 +42,7 @@ function getItemsLocalStorage() {
 
 function deleteItem(id) {
   if (confirm('Are you sure you want to delete?')) {
-    const items = getItemsLocalStorage();
+    var items = getItemsLocalStorage();
     items.splice(id, 1);
     localStorage.setItem('items', JSON.stringify(items));
     render(items);
