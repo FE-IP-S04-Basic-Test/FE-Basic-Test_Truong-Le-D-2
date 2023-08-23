@@ -1,0 +1,156 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.msg , .msg-left , .msg-right , .msg-bottom{
+  top: 100px;
+  display: none;
+  position: relative;
+  padding: 10px 20px;
+  color: #fff;
+  box-sizing: border-box;
+  background-color: teal;
+  max-width: 300px;
+  min-width: 120px;
+  min-height: 38px;
+  border: 0;
+  text-align: center;
+}
+
+.top {
+  margin-top: 200px;
+  padding-left: 50px;
+}
+
+.top:hover~.msg {
+  top: 140px;
+  position: absolute;
+  display: block ;
+}
+.msg:after {
+  content: "";
+  position: absolute;
+  /* display: block; */
+  width: 25px;
+  height: 20px;
+  top: calc(100% - 1px);
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 10px solid teal;
+}
+
+
+
+.left {
+  margin: 30px 0 0 300px;
+}
+
+.left:hover~.msg-left {
+  top: 237px;
+  position: absolute;
+  display: block ;
+  left: 154px;
+}
+.msg-left:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.msg-left:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 20px;
+  top: calc(100% - 50%);
+  left: 99%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid teal;
+}
+
+.bottom {
+  margin: 100px 0 100px 100px;
+}
+
+.bottom:hover ~ .msg-bottom {
+  top: 400px;
+  position: absolute;
+  display: block;
+  left: 60px;
+}
+
+.msg-bottom:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.msg-bottom:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 20px;
+  top: calc(-52%);
+  left: 39%;
+  box-sizing: border-box;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: 10px solid teal;
+}
+
+
+.right:hover~.msg-right {
+  top: 475px;
+  position: absolute;
+  display: block;
+  left: 50px;
+}
+
+.msg-right:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.msg-right:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 20px;
+  top: calc(22%);
+  left: -20%;
+  box-sizing: border-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid teal;
+}

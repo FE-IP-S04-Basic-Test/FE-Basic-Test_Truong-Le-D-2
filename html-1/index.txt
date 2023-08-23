@@ -1,0 +1,4 @@
+- Trên file html chúng ta phải đặt css ở phần <head> link css </head> nhằm mục đích 
+  khi dom được render đã được css trước là in ra màn hình.
+- Đặt js ở trong thẻ body và dưới cùng của những thẻ html vì chỉ khi render html thì 
+  js mới có thể bắt sự kiện và xử lí logic được với DOM.

@@ -1,0 +1,66 @@
+.normal {
+  margin: 0 auto;
+  flex-wrap: wrap;
+  width: calc(100% - 60px);
+}
+
+.small {
+  padding: 30px 0 0 20px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 75%;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 16px;
+  font-size: 13px;
+  background-color: #fff;
+}
+
+.btn-ouline {
+  border: 1px solid #9EA0A8;
+}
+
+.btn-primary-ouline {
+  border: 1px solid #7269EF;
+  color: #7269EF;
+}
+
+.btn-primary {
+  background: #7269EF;
+  color: #fff;
+}
+
+
+.disabled {
+  opacity: 0.6;
+}
+
+.color-brown {
+  background-color: rgb(212 212 212 / 65%);
+}
+
+
+.btn-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 22px;
+}
+
+.tick-black::after {
+  padding-left: 5px;
+  content: url('./assets/icon/ic-tick-black.png');
+}
+
+.tick-blue::after {
+  padding-left: 5px;
+  content: url('./assets/icon/ic-tick-blue.svg');
+}
+
+.tick-white::after {
+  padding-left: 5px;
+  content: url('./assets/icon/ic-tick-white.svg.svg');
+}
