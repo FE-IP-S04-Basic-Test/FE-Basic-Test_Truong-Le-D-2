@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  width: 40%;
+  height: auto;
+  background-color: #0c94d2e0;
+}
+
+.header-name {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+}
+
+.btn-add {
+  padding: 2px 20px;
+  border: 0;
+  border-radius: 5px;
+  outline: 0;
+  background-color: #2d2dddbf;
+  color: #fff;
+  font-size: 16px;
+}
+
+.section-body {
+  padding: 10px 0;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.input {
+  margin: 20px 0;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+}
+
+.render-list {
+  padding: 30px 0;
+  margin: 50px 0;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.item {
+  padding: 5px 10px;
+  margin: 0 10px;
+  border-bottom: 1px solid #bcb6b6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-ic-delete {
+  position: relative;
+  right: 0;
+  color: #ff0000;
+}
+
+.item-value {
+  font-size: 16px;
+}
+
