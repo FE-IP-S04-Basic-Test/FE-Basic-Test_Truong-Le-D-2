@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./main.css">
   <title>Milktea</title>
 </head>
 
@@ -16,35 +17,27 @@
     </section>
   </header>
   <main class="body">
-    <section class="card-milktea">
-      <ul class="milktea-card-list">
-        <li class="milktea-card-item">
-          <h2 class="milktea-name"></h2>
-          <p class="milktea-price"></p>
-          <div class="milktea-quantity">
-            <button class="milktea-descrease">-</button>
-            <p class="milktea-bumber"></p>
-            <button class="milktea-inscrease">+</button>
+    <div class="container">
+      <div class="wrap">
+          <div class="order">
+              <h2>O Mập Milktea</h2>
+              <div class="product_list">
+              </div>
           </div>
-          <div class="ice">
-            <label for="" class="ice-name">ice</label>
-            <ul class="ice-list">
-              <li class="ice-item">0%</li>
-              <li class="ice-item">50%</li>
-              <li class="ice-item">100%</li>
-            </ul>
+          <div class="cart mt-10 mb-10">
+              <h2 class="cart_title">Cart</h2>
+              <div class="cart_list">
+              </div>
+              <div class="cart_footer">
+                  <p class="cart_total_quantity">
+                      Total 4 products
+                  </p>
+                  <p class="cart_total_price">122,000VND</p>
+              </div>
           </div>
-          <div class="sugar">
-            <label for="" class="sugar-name">sugar</label>
-            <ul class="sugar-list">
-              <li class="sugar-item">0%</li>
-              <li class="sugar-item">50%</li>
-              <li class="sugar-item">100%</li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </section>
+      </div>
+  </div>
+
   </main>
   <script src="./index.js"></script>
 </body>
