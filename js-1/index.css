@@ -1,0 +1,37 @@
+.sugar-list,
+.ice-list,
+.milktea-quantity {
+  display: flex;
+  align-items: center;
+}
+
+.milktea-bumber-tt {
+  padding: 0 10px;
+}
+
+.ice-item-tt:nth-child(2),
+.sugar-item-tt:nth-child(2) {
+  padding: 0 10px;
+}
+
+.milktea-card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+.milktea-card-list {
+  width: 30%;
+}
+
+.btn-add-tt {
+  margin: 10px 0 0 0;
+}

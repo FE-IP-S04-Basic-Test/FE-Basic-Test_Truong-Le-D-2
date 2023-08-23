@@ -9,6 +9,11 @@ const arr2 = [
   { id: '3', quantity: 2 }
 ];
 
+
+//  function format arr1,arr2 become to new object 
+//  arr1 = { '1': { quantity: 5 }, '2': { quantity: 2 }, '3': { quantity: 3 } }
+//  arr2 = { '1': { quantity: 2 }, '3': { quantity: 2 } } 
+// and + quantity if same
 const formatArray = (arr) => {
   return arr.reduce((acc, curr) => {
     if (acc[curr.id]) {
@@ -21,8 +26,11 @@ const formatArray = (arr) => {
 };
 
 const mergeArray = (arr1, arr2) => {
+  // use function formatArray to become
   const formatArr1 = formatArray(arr1);
   const formatArr2 = formatArray(arr2);
+
+  // check if array have key same then push {id: key, quantity: formatArr1.quantity + formatArr2.quantity}
   const newArray = [];
   for (const key in formatArr1) {
     if (formatArr2[key]) {
@@ -36,4 +44,6 @@ const mergeArray = (arr1, arr2) => {
   return newArray;
 };
 
-console.log(mergeArray(arr1, arr2));
+mergeArray(arr1, arr2);
+
+
